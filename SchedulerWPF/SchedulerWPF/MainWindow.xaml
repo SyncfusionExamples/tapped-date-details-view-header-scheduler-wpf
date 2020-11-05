@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfScheduler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:WpfScheduler"
+        xmlns:interactivity="http://schemas.microsoft.com/xaml/behaviors"
+        WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <syncfusion:SfScheduler 
+            x:Name="Schedule" 
+            ViewType="Week" >
+            <interactivity:Interaction.Behaviors>
+                <local:SchedulerBehavior/>
+            </interactivity:Interaction.Behaviors>
+        </syncfusion:SfScheduler>
+    </Grid>
+</Window>
